@@ -14,6 +14,7 @@ namespace Eindopdracht_PROG4.Models.Entities
         public String HouseNumber { get; set; }
         public String Zip { get; set; }
         public String Residence { get; set; }
+        public String Email { get; set; }
 
     }
 }

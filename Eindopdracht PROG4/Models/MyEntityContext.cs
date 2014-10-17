@@ -12,5 +12,7 @@ namespace Eindopdracht_PROG4.Models
         public MyEntityContext() : base("DefaultConnection") { }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Guest> Guests { get; set; }
+        public DbSet<Address> Addresses { get; set; }
     }
 }
