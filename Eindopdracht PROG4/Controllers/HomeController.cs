@@ -15,14 +15,11 @@ namespace Eindopdracht_PROG4.Controllers
             EntityRooms entityRooms         = new EntityRooms();
             EntityBookings entityBookings   = new EntityBookings();
             //Create room
-            Room room = new Room();
-            room.Number = 1;
-            room.Price = 20.89;
 
-            entityRooms.Add(room);
+            Room room = entityRooms.getAll().First();
             //Create address for furture use
             Address guestAddress = new Address();
-            guestAddress.Street = "Ruiters";
+            guestAddress.Street = "Ruiterswegen";
             guestAddress.HouseNumber = "1b";
             guestAddress.Residence = "Hilversum";
             guestAddress.Zip = "1211KW";
@@ -40,7 +37,7 @@ namespace Eindopdracht_PROG4.Controllers
             booking.StartDate = DateTime.Now;
             booking.EndDate = DateTime.Now;
             //Nullable collection, Value.Add instead of Add 
-            booking.Guests.Value.Add(guest);
+            booking.Guests.Add(guest);
             booking.Confirmed = true;
             booking.InvoiceAddress = guestAddress;
             entityBookings.Add(booking);

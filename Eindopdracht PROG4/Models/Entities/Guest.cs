@@ -9,6 +9,10 @@ namespace Eindopdracht_PROG4.Models.Entities
 {
     public class Guest
     {
+        public Guest()
+        {
+            Bookings = new List<Booking>();
+        }
         [Key]
         public int GuestId { get; set; }
         [ForeignKey("Address")]
@@ -18,5 +22,6 @@ namespace Eindopdracht_PROG4.Models.Entities
         public Char Gender { get; set; }
         public DateTime BirthDate { get; set; }
         public virtual Address Address { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
     }
 }

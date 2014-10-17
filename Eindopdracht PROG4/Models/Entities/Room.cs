@@ -12,6 +12,5 @@ namespace Eindopdracht_PROG4.Models.Entities
         public int RoomId { get; set; }
         public int Number { get; set; }
         public double Price { get; set; }
-        public virtual List<Booking> Bookings { get; set; }
     }
 }
