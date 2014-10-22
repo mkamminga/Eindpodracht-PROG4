@@ -1,0 +1,40 @@
+﻿@model EindProgOPdracht5.Models.Room
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Room</legend>
+   
+     <div class="display-label">
+        @Html.DisplayNameFor(model => model.RoomNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoomNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RoomCapacity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoomCapacity)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Price.Price)
+    </div>
+    <div class="display-field">
+        € @Html.DisplayFor(model => model.Price.Price)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EindProgOPdracht5.Models.Room>
+
+@{
+    ViewBag.Title = "Rooms";
+}
+
+<h2>Rooms</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </th>
+        <th>   </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomCapacity)
+        </th>
+        <th>   </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price.Price)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomNumber)
+        </td><td>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomCapacity)
+        </td>
+        <td>     </td>
+        <td>
+            € @Html.DisplayFor(modelItem => item.Price.Price)
+        </td>       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoomId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoomId })
+        </td>
+    </tr>
+}
+
+</table>
