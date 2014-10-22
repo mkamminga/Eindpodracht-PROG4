@@ -23,7 +23,6 @@ namespace EindProgOPdracht5.Models
 
         public RoomPrice Price { get; set; }
 
-        public decimal MinPrice = 20;
-        
+        public decimal MinPrice = 20;        
     }
 }
